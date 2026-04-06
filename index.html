@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blind Navigation Assistant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+  <!-- AI Models -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+    }
+
+    h2 {
+      background: black;
+      color: white;
+      padding: 10px;
+      margin: 0;
+      text-align: center;
+    }
+
+    #container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    #map {
+      flex: 1;
+      width: 100%;
+    }
+
+    #camera {
+      height: 40%;
+      width: 100%;
+      display: none;
+      background: black;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Blind Navigation Assistant</h2>
+
+<div id="container">
+  <div id="map"></div>
+  <video id="camera" autoplay playsinline></video>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
